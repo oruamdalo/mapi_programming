@@ -48,6 +48,9 @@ C_SRC    = ./main.c
 OBJS =  $(STARTUP_SRC:.s=.o)
 OBJS += $(C_SRC:.c=.o)
 
+INCLUDE = -I./
+INCLUDE += -I./lib
+
 .PHONY: all
 all: $(TARGET).bin
 
@@ -66,5 +69,7 @@ $(TARGET).bin: $(TARGET).elf
 
 .PHONY: clean
 clean:
-	del -rf $(OBJS)
-	del -rf $(TARGET).elf
+	del startup_stm32f401xe.o
+	del $(TARGET).elf
+	del $(TARGET).o
+	del $(TARGET).bin
