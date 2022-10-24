@@ -7,7 +7,7 @@ Invece di utilizzare la scheda STM32F3Discovery e IAR EW IDE, ho usato una STM32
 UPDATE: guida [link](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
 
 ## TODO
- - [ ] Scrivere linker script adatto
+ - [x] Scrivere linker script adatto
  - [ ] Scrivere file di .cfg per OpenOCD (si può prendere da ChibiStudio volendo)
- - [ ] Utilizzare correttamente un compilatore arm
+ - [x] Utilizzare correttamente un compilatore arm
  
