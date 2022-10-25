@@ -21,7 +21,7 @@ foo@bar:~$ st-flash write filename.bin FLASH_MEMORY_ADDRESS
 - Debugging: First open a connection with (st-util)[https://github.com/stlink-org/stlink], then debug with gdb 
 ```console 
 foo@bar:~$ st-util
-[in a separateterminal]
+[in a separate terminal]
 
 foo#bar:~$ arm-eabi-none-gdb filename.elf
 [...]
@@ -39,7 +39,7 @@ foo#bar:~$ arm-eabi-none-gdb filename.elf
 
 ## Credits
 To do so I carefully read these:
-- [CMSIS](https://arm-software.github.io/CMsing_pg.html)
+- [CMSIS](https://arm-software.github.io/CMSIS_5/General/html/index.html)
 - [STM32 libraries and other configurations files](https://github.com/STMicroelectronics/STM32CubeF4)
 - [Bare Metal STM32 guide series](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
 - [st-link open source tools](https://github.com/stlink-org/stlink)
