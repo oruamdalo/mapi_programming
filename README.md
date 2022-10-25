@@ -18,7 +18,7 @@ The following commands are executed for:
 foo@bar:~$ st-flash write filename.bin FLASH_MEMORY_ADDRESS
 ```
 
-- Debugging: First open a connection with (st-util)[https://github.com/stlink-org/stlink], then debug with gdb 
+- Debugging: First open a connection with [st-util](https://github.com/stlink-org/stlink), then debug with gdb 
 ```console 
 foo@bar:~$ st-util
 [in a separate terminal]
