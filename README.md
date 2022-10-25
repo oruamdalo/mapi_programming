@@ -9,13 +9,6 @@ I already had a STM32 MCU, which is the STM32F401RE on the NUCLEO64 board. So in
 - I wanted to understand what was going under the hood while I was using IAR
 - I wanted a very lightweight toolchain which I could customize based on my preferences
 
-## Credits
-To do so I carefully read these:
-- [CMSIS](https://arm-software.github.io/CMsing_pg.html)
-- [STM32 libraries and other configurations files](https://github.com/STMicroelectronics/STM32CubeF4)
-- [Bare Metal STM32 guide series](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
-- [st-link open source tools](https://github.com/stlink-org/stlink)
-
 ## Usage
 Using the Makefile it is possibile to compile the project. Edit it based on your arm compiler path, your code and the libraries you use.
 
@@ -37,11 +30,17 @@ foo#bar:~$ arm-eabi-none-gdb filename.elf
 (gdb) continue
 ```
 
-
 ## TODO
  - [x] Write linker_script.ld
  - [ ] Write .cfg for OpenOCD (can take this one from ChibiStudio maybe - I should first check the LICENSE)
  - [x] Properly use arm compiler and generate Makefile
  - [ ] Improve default debugger usage
  
-### Credits
+
+## Credits
+To do so I carefully read these:
+- [CMSIS](https://arm-software.github.io/CMsing_pg.html)
+- [STM32 libraries and other configurations files](https://github.com/STMicroelectronics/STM32CubeF4)
+- [Bare Metal STM32 guide series](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
+- [st-link open source tools](https://github.com/stlink-org/stlink)
+
