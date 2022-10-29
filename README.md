@@ -36,6 +36,10 @@ foo@bar:~$ arm-eabi-none-gdb filename.elf
  - [x] Properly use arm compiler and generate Makefile
  - [ ] Improve default debugger usage
  
+## Requirements
+- [st-link for communication with the board](https://github.com/stlink-org/stlink)
+- [ARM toolchain (compiler, linker, debugger)] (https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain)
+
 
 ## Credits
 - [CMSIS](https://arm-software.github.io/CMSIS_5/General/html/index.html)
