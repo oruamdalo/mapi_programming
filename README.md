@@ -38,7 +38,6 @@ foo@bar:~$ arm-eabi-none-gdb filename.elf
  
 
 ## Credits
-To do so I carefully read these:
 - [CMSIS](https://arm-software.github.io/CMSIS_5/General/html/index.html)
 - [STM32 libraries and other configurations files](https://github.com/STMicroelectronics/STM32CubeF4)
 - [Bare Metal STM32 guide series](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
