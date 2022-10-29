@@ -23,7 +23,7 @@ foo@bar:~$ st-flash write filename.bin FLASH_MEMORY_ADDRESS
 foo@bar:~$ st-util
 [in a separate terminal]
 
-foo#bar:~$ arm-eabi-none-gdb filename.elf
+foo@bar:~$ arm-eabi-none-gdb filename.elf
 [...]
 (gbd) target extended-remote :port_number (usually :4242)
 (gdb) load
