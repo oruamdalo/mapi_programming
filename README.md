@@ -37,8 +37,8 @@ foo@bar:~$ arm-eabi-none-gdb filename.elf
  - [ ] Improve default debugger usage
  
 ## Requirements
-- [st-link for communication with the board](https://github.com/stlink-org/stlink)
-- [ARM toolchain (compiler, linker, debugger)] (https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain)
+- [st-link](https://github.com/stlink-org/stlink) for communication with the board
+- [ARM toolchain](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) (compiler, linker, debugger)
 
 
 ## Credits
