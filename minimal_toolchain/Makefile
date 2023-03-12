@@ -1,10 +1,20 @@
+#Folders
+SRC_DIR = src
+SUP_DIR = startup
+OUT_DIR = debug
+
+BOARD = stm32f303xc
+
 TARGET = main
 
 # Define the linker script location and chip architecture.
-LD_SCRIPT = linker_script.ld
+LD_SCRIPT = $(SUP_DIR)/linker_script.ld
 MCU_SPEC  = cortex-m4
 
-# Toolchain definitions (ARM bare metal defaults)
+# Toolchain for Linux
+# CC = arm-none-eabi-gcc
+
+# Toolchain definitions (ARM bare metal defaults) - IF ON LINUX COMMENT
 TOOLCHAIN = C:\gccarm
 CC = $(TOOLCHAIN)\bin\arm-none-eabi-gcc
 AS = $(TOOLCHAIN)\bin\arm-none-eabi-as
@@ -42,8 +52,8 @@ LFLAGS += -nostdlib
 LFLAGS += -lgcc
 LFLAGS += -T$(LSCRIPT)
 
-STARTUP_SRC = ./startup_stm32f401xe.s
-C_SRC    = ./main.c
+STARTUP_SRC = $(SUP_DIR)\startup_$(BOARD).s
+C_SRC    = $(SRC_DIR)\main.c
 
 OBJS =  $(STARTUP_SRC:.s=.o)
 OBJS += $(C_SRC:.c=.o)
@@ -52,7 +62,7 @@ INCLUDE = -I./
 INCLUDE += -I./lib
 
 .PHONY: all
-all: $(TARGET).bin
+all: $(OUT_DIR)\$(TARGET).bin
 
 %.o: %.s
 	$(CC) -x assembler-with-cpp $(ASFLAGS) $< -o $@
@@ -60,16 +70,24 @@ all: $(TARGET).bin
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(INCLUDE) $< -o $@
 
-$(TARGET).elf: $(OBJS)
+$(OUT_DIR)\$(TARGET).elf: $(OBJS)
 	$(CC) $^ $(LFLAGS) -o $@
 
-$(TARGET).bin: $(TARGET).elf
+$(OUT_DIR)\$(TARGET).bin: $(OUT_DIR)\$(TARGET).elf
 	$(OC) -S -O binary $< $@
 	$(OS) $<
 
 .PHONY: clean
+# Windows
 clean:
-	del startup_stm32f401xe.o
-	del $(TARGET).elf
-	del $(TARGET).o
-	del $(TARGET).bin
+	del $(SUP_DIR)\startup_$(BOARD).o
+	del $(OUT_DIR)\$(TARGET).elf
+	del $(SRC_DIR)\$(TARGET).o
+	del $(OUT_DIR)\$(TARGET).bin
+
+# Linux
+# clean:
+#   rm $(SUP_DIR)/startup_$(BOARD).o
+#   rm $(OUT_DIR)/$(TARGET).elf
+#   rm $(SRC_DIR)/$(TARGET).o
+#	rm $(OUT_DIR)/$(TARGET).bin
