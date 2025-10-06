@@ -46,5 +46,5 @@ foo@bar:~$ arm-eabi-none-gdb filename.elf
 - [STM32 libraries and other configurations files](https://github.com/STMicroelectronics/STM32CubeF4)
 - [Bare Metal STM32 guide series](https://vivonomicon.com/2018/04/20/bare-metal-stm32-programming-part-2-making-it-to-main/)
 - [st-link open source tools](https://github.com/stlink-org/stlink)
-- [Another interesting guide with detailed explanations](https://jbvalle.github.io/stm32_bare_metal_startup_linker.html)
+- [Another interesting guide with detailed explanations](https://web.archive.org/web/20221031233749/https://jbvalle.github.io/stm32_bare_metal_startup_linker.html)
 
